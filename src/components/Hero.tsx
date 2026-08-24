@@ -71,7 +71,7 @@ export default function Hero() {
     {/* Logo */}
     <div className="absolute left-1/2 top-[42%] flex h-64 w-64 -translate-x-1/2 -translate-y-1/2 items-center justify-center sm:h-72 sm:w-72">
       <Image
-        src="/LOGO.jpeg"
+        src="/LOGO.png"
         alt="Tsurayya Foundation"
         fill
         className="object-contain p-8"

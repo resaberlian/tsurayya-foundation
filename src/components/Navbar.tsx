@@ -27,7 +27,7 @@ export default function Navbar() {
             >
              <div className="relative h-10 w-10 shrink-0">
   <Image
-    src="/LOGO.jpeg"
+    src="/LOGO.png"
     alt="Tsurayya Foundation"
     fill
     className="object-contain"

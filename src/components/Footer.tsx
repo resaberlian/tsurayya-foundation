@@ -17,7 +17,7 @@ export default function Footer() {
             <div className="flex items-center gap-3">
             <div className="relative h-12 w-40">
   <Image
-    src="/LOGO.jpeg"
+    src="/LOGO.png"
     alt="Tsurayya Foundation"
     fill
     className="object-contain object-left"
