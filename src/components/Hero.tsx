@@ -33,7 +33,7 @@ export default function Hero() {
 
             <div className="mt-9 flex flex-col gap-3 sm:flex-row">
               <a
-                href="#about"
+                href="/about"
                 className="inline-flex items-center justify-center gap-2 rounded-full bg-primary px-6 py-3.5 text-sm font-semibold text-white transition-transform hover:-translate-y-0.5"
               >
                 Kenali Kami
@@ -41,7 +41,7 @@ export default function Hero() {
               </a>
 
               <a
-                href="#programs"
+                href="/programs"
                 className="inline-flex items-center justify-center rounded-full border border-primary/15 bg-white px-6 py-3.5 text-sm font-semibold text-primary transition-colors hover:bg-primary-light"
               >
                 Lihat Program
@@ -71,7 +71,7 @@ export default function Hero() {
     {/* Logo */}
     <div className="absolute left-1/2 top-[42%] flex h-64 w-64 -translate-x-1/2 -translate-y-1/2 items-center justify-center sm:h-72 sm:w-72">
       <Image
-        src="/LOGO.png"
+        src="/logo-heropage.png"
         alt="Tsurayya Foundation"
         fill
         className="object-contain p-8"

@@ -4,10 +4,10 @@
   --background: #f7f5ef;
   --foreground: #17251f;
 
-  --primary: #123c32;
+  --primary: rgb(33,101,50);
   --primary-light: #dfe9e1;
 
-  --accent: #c7a45a;
+  --accent: #D6A43A;
   --muted: #6d766f;
 
   --white: #ffffff;

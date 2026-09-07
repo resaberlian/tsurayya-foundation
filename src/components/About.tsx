@@ -1,5 +1,5 @@
 import { ArrowUpRight, Sprout } from "lucide-react";
-
+import Image from "next/image";
 export default function About() {
   return (
     <section
@@ -44,11 +44,15 @@ export default function About() {
 
               <div className="absolute bottom-0 left-1/2 h-64 w-px -translate-x-1/2 bg-accent/40" />
 
-              <Sprout
-                size={110}
-                strokeWidth={0.8}
-                className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 text-accent/70"
-              />
+            <div className="absolute left-1/2 top-[50%] flex h-64 w-64 -translate-x-1/2 -translate-y-1/2 items-center justify-center sm:h-120 sm:w-120">
+                  <Image
+                    src="/Akar.png"
+                    alt="Tsurayya Foundation"
+                    fill
+                    className="object-contain p-8"
+                    priority
+                  />
+                </div>
             </div>
 
             <div className="absolute bottom-8 left-8 right-8 flex items-end justify-between">
@@ -101,7 +105,7 @@ masyarakat yang lebih baik, mandiri, bermartabat, dan sejahtera.
                 </div>
 
                 <a
-                  href="#programs"
+                  href="/programs"
                   className="group flex items-center gap-2 text-sm font-semibold text-primary"
                 >
                   Lihat program

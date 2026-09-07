@@ -20,31 +20,31 @@ export default function Navbar() {
         <nav className="rounded-2xl border border-black/5 bg-white/90 px-4 py-3 shadow-sm backdrop-blur-md sm:px-6">
           <div className="flex items-center justify-between">
             {/* Logo */}
-            <a
-              href="#"
-              className="flex items-center gap-3"
-              onClick={() => setIsOpen(false)}
-            >
-             <div className="relative h-10 w-10 shrink-0">
-  <Image
-    src="/LOGO.png"
-    alt="Tsurayya Foundation"
-    fill
-    className="object-contain"
-    priority
-  />
-</div>
+           <a
+  href="/"
+  className="flex items-center gap-3"
+  onClick={() => setIsOpen(false)}
+>
+  <div className="relative h-10 w-10 shrink-0">
+    <Image
+      src="/LOGO.png"
+      alt="Tsurayya Foundation"
+      fill
+      className="object-contain"
+      priority
+    />
+  </div>
 
-              <div className="hidden sm:block">
-                <p className="text-sm font-semibold tracking-wide text-primary">
-                  TSURAYYA
-                </p>
-                <p className="text-[10px] tracking-[0.25em] text-muted">
-                  FOUNDATION
-                </p>
-              </div>
-            </a>
+  <div className="hidden sm:block">
+    <p className="text-sm font-semibold tracking-wide text-primary">
+      TSURAYYA
+    </p>
 
+    <p className="text-[10px] tracking-[0.25em] text-muted">
+      FOUNDATION
+    </p>
+  </div>
+</a>
             {/* Desktop Navigation */}
             <div className="hidden items-center gap-7 md:flex">
               {navItems.map((item) => (
@@ -60,7 +60,7 @@ export default function Navbar() {
 
             {/* Desktop CTA */}
             <a
-              href="#join"
+              href="/gabung"
               className="hidden items-center gap-2 rounded-full bg-primary px-5 py-2.5 text-sm font-semibold text-white transition-transform hover:-translate-y-0.5 md:flex"
             >
               Gabung Dalam Kebaikan
