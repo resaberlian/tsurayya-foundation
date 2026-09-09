@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import type { ReactNode } from "react";
 import {
   ArrowDownRight,
   ArrowUpRight,
@@ -147,6 +148,12 @@ function SectionLabel({ children }: { children: React.ReactNode }) {
     </div>
   );
 }
+type OrgBoxProps = {
+  tone: "dark" | "light";
+  subtitle: string;
+  title: ReactNode;
+  className?: string;
+};
 
 function OrgBox({
   title,
@@ -154,7 +161,7 @@ function OrgBox({
   tone = "default",
   className = "",
 }: {
-  title: string;
+  title: React.ReactNode;
   subtitle?: string;
   tone?: "dark" | "outline" | "accent" | "default" | "subtle";
   className?: string;
