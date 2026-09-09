@@ -242,13 +242,13 @@ export default function About() {
               </div>
 
               <h1 className="mt-8 text-4xl font-semibold leading-[1.08] tracking-tight sm:text-6xl lg:text-8xl">
-                Berakar dalam <span className="text-accent">kepedulian.</span>
+                Berakar dalam <span className="text-accent">Kepedulian</span>
                 <br />
                 Tumbuh dalam{" "}
-                <span className="text-accent">kebermanfaatan.</span>
+                <span className="text-accent">Kebermanfaatan</span>
               </h1>
 
-              <p className="mt-8 max-w-2xl text-base leading-8 text-white/60 sm:text-lg">
+              <p className="mt-8 max-w-2xl text-base leading-8 text-white/60 sm:text-lg ">
                 Mengenal lebih dekat Tsurayya Foundation, sebuah lembaga
                 nirlaba yang hadir untuk menumbuhkan kepedulian, memperluas
                 kebermanfaatan, dan menghadirkan perubahan positif bagi
@@ -314,7 +314,7 @@ export default function About() {
                 <SectionLabel>Siapa Kami</SectionLabel>
 
                 <p className="mt-6 text-3xl font-semibold leading-tight tracking-tight text-primary sm:text-5xl">
-                  Sebuah perjalanan yang dimulai dari kepedulian.
+                  Sebuah perjalanan yang dimulai dari kepedulian
                 </p>
 
                 <div className="mt-8 inline-flex items-center gap-3 rounded-full border border-primary/10 bg-white px-4 py-2 text-xs font-medium text-primary">
@@ -323,8 +323,8 @@ export default function About() {
                 </div>
               </div>
 
-              <div className="space-y-6 text-base leading-8 text-muted sm:text-lg">
-                <p>
+              <div className="space-y-6 text-base leading-8 text-muted sm:text-lg text-justify ">
+                <p >
                   Tsurayya Foundation merupakan lembaga nirlaba di Indonesia
                   yang didirikan pada{" "}
                   <strong className="font-semibold text-primary">
@@ -378,12 +378,12 @@ export default function About() {
                 <SectionLabel>Pengembangan Sumber Daya Insani</SectionLabel>
 
                 <h2 className="mt-6 text-3xl font-semibold leading-tight tracking-tight text-primary sm:text-5xl">
-                  Tumbuh secara utuh: ilmu, akhlak, dan{" "}
-                  <span className="text-accent">kepemimpinan.</span>
+                  Tumbuh secara utuh: Ilmu, Akhlak, dan{" "}
+                  <span className="text-accent">Kepemimpinan</span>
                 </h2>
               </div>
 
-              <div className="text-base leading-8 text-muted sm:text-lg">
+              <div className="text-base leading-8 text-muted sm:text-lg text-justify">
                 <p>
                   Penguatan dilakukan melalui Institusi Pesantren, Majelis
                   Ta&apos;lim, Kaderisasi, serta Program Beasiswa untuk
@@ -447,7 +447,7 @@ export default function About() {
                     Misi
                   </span>
                   <h2 className="mt-3 text-3xl font-semibold text-primary sm:text-4xl">
-                    Bagaimana kami bergerak.
+                    Bagaimana kami bergerak
                   </h2>
                 </div>
 
@@ -499,67 +499,401 @@ export default function About() {
             </div>
 
             {/* ============ DESKTOP TREE ============ */}
-            <div className="mt-16 hidden overflow-x-auto lg:block">
-              <div className="flex min-w-[880px] flex-col items-center pb-4">
-                <OrgBox
-                  tone="dark"
-                  subtitle="Dewan Pembina / Pengawas"
-                  title="Lutfi Thamrin · Amin Saefullah Muchtar"
-                  className="w-[420px]"
-                />
-                <VStem />
+           <div className="mt-16 hidden overflow-x-auto lg:block">
+  <div className="relative mx-auto h-[780px] w-[1000px]">
 
-                <OrgBox
-                  tone="outline"
-                  subtitle="Dewan Pengurus — Ketua Umum"
-                  title="Christiana Soerja"
-                  className="w-72"
-                />
-                <VStem />
+    {/* =====================================================
+        CONNECTOR LINES
+    ===================================================== */}
+    <svg
+      className="pointer-events-none absolute inset-0 z-0 h-full w-full"
+      viewBox="0 0 1000 780"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      {/* -----------------------------------------------
+          PEMBINA → KETUA UMUM
+      ------------------------------------------------ */}
+      <line
+        x1="500"
+        y1="125"
+        x2="500"
+        y2="160"
+        stroke="currentColor"
+        strokeWidth="1.5"
+        className="text-primary/30"
+      />
 
-                <div className="relative flex w-full justify-center border-t border-primary/20 pt-6">
-                  <div className="flex gap-16">
-                    <div className="flex flex-col items-center">
-                      <div className="-mt-6 mb-0">
-                        <VStem />
-                      </div>
-                      <OrgBox subtitle="Sekretaris" title="Eva Puasanti" className="w-56" />
-                    </div>
+      {/* Node */}
+      <circle
+        cx="500"
+        cy="125"
+        r="5"
+        fill="currentColor"
+        className="text-accent"
+      />
 
-                    <div className="flex flex-col items-center">
-                      <div className="-mt-6 mb-0">
-                        <VStem />
-                      </div>
-                      <OrgBox tone="accent" subtitle="Ketua I" title="Faridah Nihayah" className="w-56" />
-                      <VStem />
-                    </div>
+      {/* -----------------------------------------------
+          KETUA UMUM → 3 POSISI
+      ------------------------------------------------ */}
 
-                    <div className="flex flex-col items-center">
-                      <div className="-mt-6 mb-0">
-                        <VStem />
-                      </div>
-                      <OrgBox subtitle="Bendahara" title="Fikzecustin L Mega V.P." className="w-56" />
-                    </div>
-                  </div>
-                </div>
+      {/* vertical */}
+      <line
+        x1="500"
+        y1="265"
+        x2="500"
+        y2="305"
+        stroke="currentColor"
+        strokeWidth="1.5"
+        className="text-primary/30"
+      />
 
-                <OrgBox tone="subtle" subtitle="Departemen" title="Fundraising" className="w-56" />
-                <VStem />
+      {/* horizontal Sekretaris → Bendahara */}
+      <line
+        x1="180"
+        y1="305"
+        x2="820"
+        y2="305"
+        stroke="currentColor"
+        strokeWidth="1.5"
+        className="text-primary/30"
+      />
 
-                <div className="flex w-full justify-center border-t border-primary/20 pt-6">
-                  <div className="flex gap-10">
-                    {["Program", "Humas dan Media", "SDM dan Relawan"].map((dep) => (
-                      <div key={dep} className="flex flex-col items-center">
-                        <div className="-mt-6 mb-0">
-                          <VStem />
-                        </div>
-                        <OrgBox tone="subtle" subtitle="Departemen" title={dep} className="w-52" />
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              </div>
-            </div>
+      {/* Sekretaris connector */}
+      <line
+        x1="180"
+        y1="305"
+        x2="180"
+        y2="330"
+        stroke="currentColor"
+        strokeWidth="1.5"
+        className="text-primary/30"
+      />
+
+      {/* Ketua I connector */}
+      <line
+        x1="500"
+        y1="305"
+        x2="500"
+        y2="330"
+        stroke="currentColor"
+        strokeWidth="1.5"
+        className="text-primary/30"
+      />
+
+      {/* Bendahara connector */}
+      <line
+        x1="820"
+        y1="305"
+        x2="820"
+        y2="330"
+        stroke="currentColor"
+        strokeWidth="1.5"
+        className="text-primary/30"
+      />
+
+      {/* Nodes */}
+      <circle
+        cx="180"
+        cy="305"
+        r="5"
+        fill="currentColor"
+        className="text-accent"
+      />
+
+      <circle
+        cx="500"
+        cy="305"
+        r="5"
+        fill="currentColor"
+        className="text-accent"
+      />
+
+      <circle
+        cx="820"
+        cy="305"
+        r="5"
+        fill="currentColor"
+        className="text-accent"
+      />
+
+      {/* -----------------------------------------------
+          KETUA I ↔ BENDAHARA → FUNDRAISING
+
+          Junction berada DI ANTARA keduanya
+      ------------------------------------------------ */}
+
+      {/* Ketua I → junction */}
+      <line
+        x1="580"
+        y1="365"
+        x2="665"
+        y2="365"
+        stroke="currentColor"
+        strokeWidth="1.5"
+        className="text-primary/30"
+      />
+
+      {/* Bendahara → junction */}
+      <line
+        x1="820"
+        y1="365"
+        x2="665"
+        y2="365"
+        stroke="currentColor"
+        strokeWidth="1.5"
+        className="text-primary/30"
+      />
+
+      {/* Junction turun */}
+      <line
+        x1="665"
+        y1="365"
+        x2="665"
+        y2="420"
+        stroke="currentColor"
+        strokeWidth="1.5"
+        className="text-primary/30"
+      />
+
+      {/* Fundraising node */}
+      <circle
+        cx="665"
+        cy="365"
+        r="5"
+        fill="currentColor"
+        className="text-accent"
+      />
+
+      {/* -----------------------------------------------
+          KETUA I → DEPARTEMEN
+      ------------------------------------------------ */}
+
+      <line
+        x1="500"
+        y1="395"
+        x2="500"
+        y2="525"
+        stroke="currentColor"
+        strokeWidth="1.5"
+        className="text-primary/30"
+      />
+
+      {/* Department horizontal */}
+      <line
+        x1="180"
+        y1="525"
+        x2="820"
+        y2="525"
+        stroke="currentColor"
+        strokeWidth="1.5"
+        className="text-primary/30"
+      />
+
+      {/* Program */}
+      <line
+        x1="180"
+        y1="525"
+        x2="180"
+        y2="550"
+        stroke="currentColor"
+        strokeWidth="1.5"
+        className="text-primary/30"
+      />
+
+      {/* Humas */}
+      <line
+        x1="500"
+        y1="525"
+        x2="500"
+        y2="550"
+        stroke="currentColor"
+        strokeWidth="1.5"
+        className="text-primary/30"
+      />
+
+      {/* SDM */}
+      <line
+        x1="820"
+        y1="525"
+        x2="820"
+        y2="550"
+        stroke="currentColor"
+        strokeWidth="1.5"
+        className="text-primary/30"
+      />
+
+      {/* Department nodes */}
+      <circle
+        cx="500"
+        cy="525"
+        r="5"
+        fill="currentColor"
+        className="text-accent"
+      />
+
+      <circle
+        cx="180"
+        cy="525"
+        r="5"
+        fill="currentColor"
+        className="text-accent"
+      />
+
+      <circle
+        cx="820"
+        cy="525"
+        r="5"
+        fill="currentColor"
+        className="text-accent"
+      />
+    </svg>
+
+
+    {/* =====================================================
+        DEWAN PEMBINA
+    ===================================================== */}
+
+    <div className="absolute left-1/2 top-0 z-10 -translate-x-1/2">
+      <OrgBox
+        tone="dark"
+        subtitle="Dewan Pembina / Pengawas"
+        title={
+          <>
+            <span className="block">1. Lutfi Thamrin</span>
+            <span className="mt-1 block">
+              2. Amin Saefullah Muchtar
+            </span>
+          </>
+        }
+        className="w-[420px]"
+      />
+    </div>
+
+
+    {/* =====================================================
+        DEWAN PENGURUS
+    ===================================================== */}
+
+    <div className="absolute left-1/2 top-[160px] z-10 -translate-x-1/2">
+      <OrgBox
+        tone="dark"
+        subtitle="Dewan Pengurus"
+        title={
+          <>
+            <span className="block uppercase">
+              Ketua Umum
+            </span>
+
+            <span className="mt-2 block">
+              Christiana Soerja
+            </span>
+          </>
+        }
+        className="w-[420px]"
+      />
+    </div>
+
+
+    {/* =====================================================
+        SEKRETARIS
+    ===================================================== */}
+
+    <div className="absolute left-[68px] top-[330px] z-10">
+      <OrgBox
+        subtitle="Sekretaris"
+        title="Eva Puasanti"
+        className="w-56"
+      />
+    </div>
+
+
+    {/* =====================================================
+        KETUA I
+    ===================================================== */}
+
+    <div className="absolute left-1/2 top-[330px] z-10 -translate-x-1/2">
+      <OrgBox
+        tone="accent"
+        subtitle="Ketua I"
+        title="Faridah Nihayah"
+        className="w-56"
+      />
+    </div>
+
+
+    {/* =====================================================
+        BENDAHARA
+    ===================================================== */}
+
+    <div className="absolute right-[68px] top-[330px] z-10">
+      <OrgBox
+        subtitle="Bendahara"
+        title="Fitzekustin L Mega V.P."
+        className="w-56"
+      />
+    </div>
+
+
+    {/* =====================================================
+        FUNDRAISING
+
+        POSISINYA DI ANTARA KETUA I & BENDAHARA
+    ===================================================== */}
+
+    <div className="absolute left-[665px] top-[420px] z-10 -translate-x-1/2">
+      <OrgBox
+        tone="subtle"
+        subtitle="Departemen"
+        title="Fundraising"
+        className="w-56"
+      />
+    </div>
+
+
+    {/* =====================================================
+        DEPARTEMEN PROGRAM
+    ===================================================== */}
+
+    <div className="absolute left-[68px] top-[550px] z-10">
+      <OrgBox
+        tone="subtle"
+        subtitle="Departemen"
+        title="Program"
+        className="w-64"
+      />
+    </div>
+
+
+    {/* =====================================================
+        DEPARTEMEN HUMAS & MEDIA
+    ===================================================== */}
+
+    <div className="absolute left-1/2 top-[550px] z-10 -translate-x-1/2">
+      <OrgBox
+        tone="subtle"
+        subtitle="Departemen"
+        title="Humas dan Media"
+        className="w-64"
+      />
+    </div>
+
+
+    {/* =====================================================
+        DEPARTEMEN SDM & RELAWAN
+    ===================================================== */}
+
+    <div className="absolute right-[68px] top-[550px] z-10">
+      <OrgBox
+        tone="subtle"
+        subtitle="Departemen"
+        title="SDM dan Relawan"
+        className="w-64"
+      />
+    </div>
+
+  </div>
+</div>
 
             {/* ============ MOBILE / TABLET LIST ============ */}
             <div className="mt-14 space-y-3 lg:hidden">
@@ -604,7 +938,7 @@ export default function About() {
 
                 <h2 className="mt-6 text-3xl font-semibold leading-tight tracking-tight sm:text-5xl">
                   Sebuah <span className="text-accent">Pohon Kebaikan</span>{" "}
-                  dalam Naungan Perisai.
+                  dalam Naungan Perisai
                 </h2>
 
                 <div className="relative mx-auto mt-10 aspect-square max-w-sm overflow-hidden rounded-[2rem] bg-white p-8 sm:mt-12 sm:max-w-md">
@@ -655,7 +989,7 @@ export default function About() {
             <div className="max-w-2xl">
               <SectionLabel>Nilai-Nilai Kami</SectionLabel>
               <h2 className="mt-6 text-3xl font-semibold leading-tight text-primary sm:text-5xl">
-                Kebaikan yang <span className="text-accent">kami jaga.</span>
+                Kebaikan yang <span className="text-accent">kami jaga</span>
               </h2>
               <p className="mt-5 text-base leading-8 text-muted sm:text-lg">
                 Tujuh nilai ini menjadi pegangan dalam setiap program,
@@ -729,12 +1063,12 @@ export default function About() {
 
                 <h2 className="mt-6 text-3xl font-semibold leading-tight sm:text-5xl">
                   Karena satu kebaikan dapat menjadi awal dari
-                  kebaikan-kebaikan berikutnya.
+                  kebaikan-kebaikan berikutnya
                 </h2>
 
                 <p className="mt-5 max-w-xl text-sm leading-7 text-white/60 sm:text-base">
                   Baik lewat donasi, kolaborasi program, maupun menjadi
-                  relawan — setiap bentuk keterlibatan Anda berarti bagi
+                  relawan setiap bentuk keterlibatan Anda berarti bagi
                   perjalanan ini.
                 </p>
               </div>
@@ -742,7 +1076,7 @@ export default function About() {
               <div className="flex shrink-0 flex-col gap-3 sm:flex-row lg:flex-col">
                 
                 <a
-                  href="/contact"
+                  href="/gabung"
                   className="inline-flex items-center justify-center gap-2 rounded-full bg-white px-6 py-3.5 text-sm font-semibold text-primary transition-transform duration-300 hover:-translate-y-1 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
                 >
                   Bergabung dalam Kebaikan

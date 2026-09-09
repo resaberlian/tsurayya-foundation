@@ -83,7 +83,7 @@ export default function Hero() {
     <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-primary via-primary/80 to-transparent" />
 
     {/* Bottom content */}
-    <div className="absolute inset-x-0 bottom-0 z-10 p-7 sm:p-8">
+    <div className="absolute inset-x-0 bottom-0 z-10 p-7 sm:p-">
       <p className="text-xs font-medium uppercase tracking-[0.2em] text-accent">
         Berakar · Bertumbuh · Berdampak
       </p>

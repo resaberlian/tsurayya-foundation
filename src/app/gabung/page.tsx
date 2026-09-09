@@ -1,5 +1,6 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import { FaInstagram } from "react-icons/fa";
 import {
   ArrowUpRight,
   Heart,
@@ -10,6 +11,7 @@ import {
   Mail,
   Phone,
   MapPin,
+  
 
 } from "lucide-react";
 
@@ -21,6 +23,8 @@ const waysToJoin = [
     description:
       "Mendukung program-program sosial melalui donasi sesuai dengan ketentuan dan kebutuhan program.",
     action: "Donasi Sekarang",
+    whatsappMessage:
+      "Halo Tsurayya Foundation, saya ingin menjadi Donatur dan mendapatkan informasi mengenai program donasi yang tersedia.",
   },
   {
     number: "02",
@@ -29,6 +33,8 @@ const waysToJoin = [
     description:
       "Menyumbangkan waktu, tenaga, ilmu, dan keterampilan untuk kegiatan sosial.",
     action: "Jadi Relawan",
+    whatsappMessage:
+      "Halo Tsurayya Foundation, saya tertarik untuk menjadi Relawan. Mohon informasi mengenai kesempatan dan kegiatan relawan yang tersedia.",
   },
   {
     number: "03",
@@ -37,6 +43,8 @@ const waysToJoin = [
     description:
       "Berkolaborasi dalam mengembangkan program yang memberikan manfaat bagi masyarakat.",
     action: "Jadi Mitra",
+    whatsappMessage:
+      "Halo Tsurayya Foundation, saya tertarik untuk menjadi Mitra dan ingin berdiskusi mengenai peluang kolaborasi.",
   },
   {
     number: "04",
@@ -45,9 +53,10 @@ const waysToJoin = [
     description:
       "Menyebarkan informasi dan mengajak lebih banyak orang untuk terlibat dalam gerakan kebaikan.",
     action: "Sebarkan Kebaikan",
+    whatsappMessage:
+      "Halo Tsurayya Foundation, saya tertarik untuk menjadi Sahabat Kebaikan dan ingin ikut membantu menyebarkan informasi mengenai gerakan kebaikan.",
   },
 ];
-
 const principles = [
   "Amanah",
   "Transparan",
@@ -89,7 +98,7 @@ export default function JoinPage() {
           <div className="relative mx-auto max-w-7xl px-4 py-20 sm:px-6 sm:py-32 lg:px-8 lg:py-36">
             <div className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-4 py-1.5 text-xs font-medium text-white/70 backdrop-blur-sm">
               <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-accent" />
-            Bergabung Dalam Kebaikan
+            Bergabung dalam Kebaikan
             </div>
             <div className="max-w-5xl">
 
@@ -97,7 +106,7 @@ export default function JoinPage() {
               <h1 className="mt-8 max-w-4xl text-5xl font-semibold leading-[1.05] tracking-tight sm:text-6xl lg:text-8xl">
                 Karena kebaikan akan tumbuh ketika kita{" "}
                 <span className="text-accent">
-                  bergerak bersama.
+                  bergerak bersama
                 </span>
               </h1>
 
@@ -132,60 +141,107 @@ export default function JoinPage() {
               <h2 className="mt-6 text-4xl font-semibold leading-tight tracking-tight text-primary sm:text-6xl">
                 Temukan cara untuk ikut{" "}
                 <span className="text-accent">
-                  berbuat baik.
+                  berbuat baik
                 </span>
               </h2>
 
             </div>
 
 
-            <div className="mt-16 grid gap-5 md:grid-cols-2">
+        <div className="mt-16 grid gap-5 md:grid-cols-2">
+  {waysToJoin.map((item) => {
+    const Icon = item.icon;
 
-              {waysToJoin.map((item) => {
-                const Icon = item.icon;
+    const whatsappUrl = `https://wa.me/6285287034268?text=${encodeURIComponent(
+      item.whatsappMessage
+    )}`;
 
-                return (
-                  <article
-                    key={item.number}
-                    className="group relative overflow-hidden rounded-[2rem] border border-primary/10 bg-white p-7 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl sm:p-9"
-                  >
+    return (
+      <a
+        key={item.number}
+        href={whatsappUrl}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="group block"
+      >
+        <article
+          className="
+            relative h-full overflow-hidden rounded-[2rem]
+            border border-primary/10 bg-white p-7
+            transition-all duration-300
+            hover:-translate-y-1
+            hover:border-primary/20
+            hover:shadow-xl
+            sm:p-9
+          "
+        >
+          {/* Number */}
+          <div className="absolute right-7 top-7 text-sm font-semibold text-primary/10 transition-colors group-hover:text-accent/30">
+            {item.number}
+          </div>
 
-                    {/* Number */}
-                    <div className="absolute right-7 top-7 text-sm font-semibold text-primary/10">
-                      {item.number}
-                    </div>
+          {/* Icon */}
+          <div
+            className="
+              flex h-14 w-14 items-center justify-center
+              rounded-full bg-primary-light text-primary
+              transition-all duration-300
+              group-hover:bg-primary
+              group-hover:text-white
+            "
+          >
+            <Icon
+              size={24}
+              strokeWidth={1.5}
+            />
+          </div>
 
-                    <div className="flex h-14 w-14 items-center justify-center rounded-full bg-primary-light text-primary">
-                      <Icon
-                        size={24}
-                        strokeWidth={1.5}
-                      />
-                    </div>
+          {/* Title */}
+          <h3 className="mt-8 text-2xl font-semibold text-primary sm:text-3xl">
+            {item.title}
+          </h3>
 
-                    <h3 className="mt-8 text-2xl font-semibold text-primary sm:text-3xl">
-                      {item.title}
-                    </h3>
+          {/* Description */}
+          <p className="mt-4 max-w-md text-sm leading-7 text-muted">
+            {item.description}
+          </p>
 
-                    <p className="mt-4 max-w-md text-sm leading-7 text-muted">
-                      {item.description}
-                    </p>
+          {/* Action */}
+          <div
+            className="
+              mt-8 inline-flex items-center gap-2
+              text-sm font-semibold text-primary
+              transition-colors
+              group-hover:text-accent
+            "
+          >
+            {item.action}
 
-                    <a
-                      href="#contact"
-                      className="mt-8 inline-flex items-center gap-2 text-sm font-semibold text-primary transition-colors group-hover:text-accent"
-                    >
-                      {item.action}
-                      <ArrowUpRight
-                        size={17}
-                        className="transition-transform group-hover:translate-x-1 group-hover:-translate-y-1"
-                      />
-                    </a>
+            <ArrowUpRight
+              size={17}
+              className="
+                transition-transform duration-300
+                group-hover:translate-x-1
+                group-hover:-translate-y-1
+              "
+            />
+          </div>
 
-                  </article>
-                );
-              })}
-
-            </div>
+          {/* Decorative hover element */}
+          <div
+            className="
+              pointer-events-none absolute -bottom-16 -right-16
+              h-32 w-32 rounded-full
+              border border-primary/5
+              transition-transform duration-500
+              group-hover:scale-150
+            "
+          />
+        </article>
+      </a>
+    );
+  })}
+</div>
 
           </div>
 
@@ -214,7 +270,7 @@ export default function JoinPage() {
               </p>
 
               <h2 className="mt-5 text-4xl font-semibold leading-tight tracking-tight text-primary sm:text-5xl lg:text-6xl">
-                Mari tumbuh bersama.
+                Mari Tumbuh Bersama
               </h2>
 
               <p className="mx-auto mt-6 max-w-2xl text-base leading-8 text-muted sm:text-lg">
@@ -252,7 +308,7 @@ export default function JoinPage() {
                 <h2 className="mt-6 text-4xl font-semibold leading-tight tracking-tight text-primary sm:text-5xl">
                   Setiap amanah adalah{" "}
                   <span className="text-accent">
-                    tanggung jawab.
+                    tanggung jawab
                   </span>
                 </h2>
 
@@ -262,13 +318,7 @@ export default function JoinPage() {
               {/* Content */}
               <div>
 
-                <div className="flex h-14 w-14 items-center justify-center rounded-full bg-primary-light text-primary">
-                  <ShieldCheck
-                    size={25}
-                    strokeWidth={1.5}
-                  />
-                </div>
-
+              
                 <p className="mt-8 text-base leading-8 text-muted sm:text-lg">
                   Tsurayya Foundation berkomitmen untuk menjaga setiap
                   kepercayaan yang diberikan dengan penuh tanggung jawab.
@@ -331,7 +381,7 @@ export default function JoinPage() {
                 <h2 className="mt-6 text-4xl font-semibold leading-tight tracking-tight text-primary sm:text-5xl">
                   Mari terhubung dan mulai{" "}
                   <span className="text-accent">
-                    bergerak bersama.
+                    bergerak bersama
                   </span>
                 </h2>
 
@@ -419,19 +469,37 @@ export default function JoinPage() {
 
 
                 {/* Instagram */}
-                <div className="rounded-[1.5rem] border border-primary/10 bg-white p-6">
+                 <a
+                    href="https://www.instagram.com/tsurayya.foundation/"
+                    target="_blank"
+                    
+                    rel="noopener noreferrer"
+                    aria-label="Instagram Tsurayya Foundation"
+                    className="rounded-[1.5rem] border border-primary/10 bg-white p-6 transition-all hover:-translate-y-1 hover:shadow-lg"
+                  >
+               
 
-                
-
-                  <p className="mt-5 text-xs font-semibold uppercase tracking-[0.15em] text-primary">
+                  
+                    <FaInstagram     className="text-accent" size={18} />
+             
+                   <p className="mt-5 text-xs font-semibold uppercase tracking-[0.15em] text-primary">
                     Instagram
                   </p>
 
-                  <p className="mt-3 text-sm leading-7 text-muted">
+
+                   <p className="mt-3 text-sm leading-7 text-muted">
                     @tsurayya.foundation
                   </p>
 
-                </div>
+                     </a>
+                
+                
+                
+                 
+                
+
+        
+         
 
               </div>
 
@@ -460,7 +528,7 @@ export default function JoinPage() {
               </p>
 
               <h2 className="mt-5 text-4xl font-semibold leading-tight sm:text-5xl">
-                Setiap orang punya cara untuk mengambil bagian dalam kebaikan.
+                Setiap orang punya cara untuk mengambil bagian dalam kebaikan
               </h2>
 
               <a

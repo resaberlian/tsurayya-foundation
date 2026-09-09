@@ -1,9 +1,11 @@
+import { FaInstagram, FaYoutube } from "react-icons/fa";
 import {
   ArrowUpRight,
   Camera,
   Play,
   Mail,
   MapPin,
+  Phone,
 } from "lucide-react";
 import Image from "next/image";
 export default function Footer() {
@@ -36,7 +38,7 @@ export default function Footer() {
             </div>
 
             <h2 className="mt-8 max-w-md text-3xl font-semibold leading-tight sm:text-4xl">
-              Berakar dalam kepedulian, tumbuh dalam kebermanfaatan.
+              Berakar dalam Kepedulian, Tumbuh dalam Kebermanfaatan
             </h2>
 
             <p className="mt-6 max-w-md text-sm leading-7 text-white/50">
@@ -53,14 +55,14 @@ export default function Footer() {
 
             <div className="mt-6 flex flex-col gap-4">
               <a
-                href="#about"
+                href="/about"
                 className="text-sm text-white/60 hover:text-white"
               >
                 Tentang Kami
               </a>
 
               <a
-                href="#programs"
+                href="/programs"
                 className="text-sm text-white/60 hover:text-white"
               >
                 Program
@@ -81,7 +83,7 @@ export default function Footer() {
               </a>
 
               <a
-                href="#join"
+                href="/gabung"
                 className="text-sm text-white/60 hover:text-white"
               >
                 Bergabung
@@ -125,19 +127,19 @@ export default function Footer() {
             {/* Social */}
             <div className="mt-8 flex gap-3">
               <a
-                href="#"
+              href="https://www.instagram.com/tsurayya.foundation/"
                 aria-label="Instagram"
                 className="flex h-10 w-10 items-center justify-center rounded-full border border-white/10 transition-colors hover:bg-white hover:text-primary"
               >
-                <Camera size={17} />
+                <FaInstagram size={17} />
               </a>
 
               <a
-                href="#"
+                href="https://www.youtube.com/@TsurayyaIndonesia"
                 aria-label="YouTube"
                 className="flex h-10 w-10 items-center justify-center rounded-full border border-white/10 transition-colors hover:bg-white hover:text-primary"
               >
-                <Play size={17} />
+                <FaYoutube size={17} />
               </a>
 
               <a
@@ -147,6 +149,19 @@ export default function Footer() {
               >
                 <Mail size={17} />
               </a>
+              <a
+                  href="https://wa.me/6285287034268"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                   className="flex h-10 w-10 items-center justify-center rounded-full border border-white/10 transition-colors hover:bg-white hover:text-primary"
+                >
+
+                  <Phone
+                    size={21}
+                   
+                    strokeWidth={1.6}
+                  />
+              </a>
             </div>
           </div>
         </div>
@@ -155,15 +170,7 @@ export default function Footer() {
         <div className="flex flex-col gap-4 border-t border-white/10 py-6 text-xs text-white/40 sm:flex-row sm:items-center sm:justify-between">
           <p>© 2026 Tsurayya Foundation. All rights reserved.</p>
 
-          <div className="flex items-center gap-5">
-            <a href="#" className="hover:text-white">
-              Privacy
-            </a>
-
-            <a href="#" className="hover:text-white">
-              Terms
-            </a>
-          </div>
+          
         </div>
       </div>
     </footer>

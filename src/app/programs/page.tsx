@@ -146,9 +146,9 @@ export default function ProgramPage() {
               </div>
 
               <h1 className="mt-8 text-4xl font-semibold leading-[1.08] tracking-tight sm:text-6xl lg:text-7xl">
-                Kebaikan yang <span className="text-accent">terarah</span>,
+                Kebaikan yang <span className="text-accent">Terarah</span>,
                 <br />
-                manfaat yang <span className="text-accent">berkelanjutan.</span>
+                Manfaat yang <span className="text-accent">Berkelanjutan</span>
               </h1>
 
               <p className="mt-8 max-w-2xl text-base leading-8 text-white/60 sm:text-lg">
@@ -171,10 +171,10 @@ export default function ProgramPage() {
         ===================================================== */}
         <section className="py-20 sm:py-32">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <div className="max-w-2xl">
+            <div className="max-w-3xl">
               <SectionLabel>Empat Pilar</SectionLabel>
               <h2 className="mt-6 text-3xl font-semibold leading-tight text-primary sm:text-5xl">
-                Ruang lingkup <span className="text-accent">program kami.</span>
+                Ruang Lingkup <span className="text-accent">Program Kami</span>
               </h2>
               <p className="mt-5 text-base leading-8 text-muted sm:text-lg">
                 Setiap pilar menjangkau kebutuhan yang berbeda, namun
@@ -234,8 +234,8 @@ export default function ProgramPage() {
             <div className="max-w-2xl">
               <SectionLabel>Cara Kami Bekerja</SectionLabel>
               <h2 className="mt-6 text-3xl font-semibold leading-tight text-primary sm:text-5xl">
-                Dari kebutuhan menjadi{" "}
-                <span className="text-accent">kebermanfaatan.</span>
+                Dari Kebutuhan Menjadi{" "}
+                <span className="text-accent">Kebermanfaatan</span>
               </h2>
             </div>
 
@@ -291,7 +291,7 @@ export default function ProgramPage() {
                 </div>
 
                 <h2 className="mt-6 text-3xl font-semibold leading-tight sm:text-5xl">
-                  Jadi bagian dari setiap kebaikan yang kami jalankan.
+                  Jadilah bagian dari setiap kebaikan yang kami jalankan
                 </h2>
 
                 <p className="mt-5 max-w-xl text-sm leading-7 text-white/60 sm:text-base">
@@ -303,7 +303,8 @@ export default function ProgramPage() {
 
               <div className="flex shrink-0 flex-col gap-3 sm:flex-row lg:flex-col">
                 <a 
-                  href="/contact"
+                  href="http://wa.me/085287034268?text=Assalamualaikum%20Tsurayya%20Foundation.%20Saya%20ingin%20mendukung%20program%20Tsurayya%20Foundation.%20Mohon%20informasi%20lebih%20lanjut."
+                  target="_blank"
                   className="inline-flex items-center justify-center gap-2 rounded-full bg-white px-6 py-3.5 text-sm font-semibold text-primary transition-transform duration-300 hover:-translate-y-1 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
                 >
                   Dukung Sekarang

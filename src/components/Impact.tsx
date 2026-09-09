@@ -56,44 +56,7 @@ export default function Impact() {
         </div>
 
         {/* Placeholder statistics */}
-        <div className="mt-20 grid border-y border-white/10 sm:grid-cols-2 lg:grid-cols-4">
-          <div className="border-b border-white/10 px-6 py-10 lg:border-b-0 lg:border-r">
-            <p className="text-5xl font-semibold tracking-tight text-white">
-              +XXX
-            </p>
-            <p className="mt-3 text-sm text-white/60">
-              Penerima Manfaat
-            </p>
-          </div>
-
-          <div className="border-b border-white/10 px-6 py-10 sm:border-l lg:border-b-0 lg:border-r">
-            <p className="text-5xl font-semibold tracking-tight text-white">
-              +XX
-            </p>
-            <p className="mt-3 text-sm text-white/60">
-              Program
-            </p>
-          </div>
-
-          <div className="border-b border-white/10 px-6 py-10 lg:border-b-0 lg:border-r">
-            <p className="text-5xl font-semibold tracking-tight text-white">
-              +XX
-            </p>
-            <p className="mt-3 text-sm text-white/60">
-              Relawan
-            </p>
-          </div>
-
-          <div className="px-6 py-10">
-            <p className="text-5xl font-semibold tracking-tight text-white">
-              +XX
-            </p>
-            <p className="mt-3 text-sm text-white/60">
-              Mitra
-            </p>
-          </div>
-        </div>
-
+  
         {/* Impact areas */}
         <div className="mt-20">
           <p className="text-xs font-semibold uppercase tracking-[0.2em] text-white/40">
