@@ -557,388 +557,410 @@ export default function About() {
               </h2>
             </div>
 
-            {/* =====================================================
-                DESKTOP ORGANIZATION TREE
-            ===================================================== */}
+ 
 
-            <div className="mt-16 hidden overflow-x-auto lg:block">
-              <div className="relative mx-auto h-[780px] w-[1000px]">
-                {/* CONNECTOR LINES */}
+<div className="mt-16 hidden overflow-x-auto lg:block">
+  <div className="relative mx-auto h-[780px] w-[1000px]">
 
-                <svg
-                  className="pointer-events-none absolute inset-0 z-0 h-full w-full"
-                  viewBox="0 0 1000 780"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  {/* Pembina → Ketua Umum */}
+    {/* =====================================================
+        CONNECTOR LINES
+    ===================================================== */}
 
-                  <line
-                    x1="500"
-                    y1="125"
-                    x2="500"
-                    y2="160"
-                    stroke="currentColor"
-                    strokeWidth="1.5"
-                    className="text-primary/30"
-                  />
+    <svg
+      className="pointer-events-none absolute inset-0 z-0 h-full w-full"
+      viewBox="0 0 1000 780"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
 
-                  <circle
-                    cx="500"
-                    cy="125"
-                    r="5"
-                    fill="currentColor"
-                    className="text-accent"
-                  />
+      {/* =====================================================
+          DEWAN PEMBINA → KETUA UMUM
+      ===================================================== */}
 
-                  {/* Ketua Umum → 3 posisi */}
+      <line
+        x1="500"
+        y1="125"
+        x2="500"
+        y2="160"
+        stroke="currentColor"
+        strokeWidth="1.5"
+        className="text-primary/30"
+      />
 
-                  <line
-                    x1="500"
-                    y1="265"
-                    x2="500"
-                    y2="305"
-                    stroke="currentColor"
-                    strokeWidth="1.5"
-                    className="text-primary/30"
-                  />
+      <circle
+        cx="500"
+        cy="125"
+        r="5"
+        fill="currentColor"
+        className="text-accent"
+      />
 
-                  <line
-                    x1="180"
-                    y1="305"
-                    x2="820"
-                    y2="305"
-                    stroke="currentColor"
-                    strokeWidth="1.5"
-                    className="text-primary/30"
-                  />
 
-                  {/* Sekretaris */}
+      {/* =====================================================
+          KETUA UMUM → KETUA I
+      ===================================================== */}
 
-                  <line
-                    x1="180"
-                    y1="305"
-                    x2="180"
-                    y2="330"
-                    stroke="currentColor"
-                    strokeWidth="1.5"
-                    className="text-primary/30"
-                  />
+      <line
+        x1="500"
+        y1="265"
+        x2="500"
+        y2="330"
+        stroke="currentColor"
+        strokeWidth="1.5"
+        className="text-primary/30"
+      />
 
-                  {/* Ketua I */}
+      <circle
+        cx="500"
+        cy="295"
+        r="5"
+        fill="currentColor"
+        className="text-accent"
+      />
 
-                  <line
-                    x1="500"
-                    y1="305"
-                    x2="500"
-                    y2="330"
-                    stroke="currentColor"
-                    strokeWidth="1.5"
-                    className="text-primary/30"
-                  />
 
-                  {/* Bendahara */}
+      {/* =====================================================
+          SEKRETARIS → KETUA I
 
-                  <line
-                    x1="820"
-                    y1="305"
-                    x2="820"
-                    y2="330"
-                    stroke="currentColor"
-                    strokeWidth="1.5"
-                    className="text-primary/30"
-                  />
+          Garis keluar dari sisi kanan Sekretaris
+          dan masuk ke sisi kiri Ketua I.
+      ===================================================== */}
 
-                  {/* Nodes */}
+      <line
+        x1="292"
+        y1="365"
+        x2="388"
+        y2="365"
+        stroke="currentColor"
+        strokeWidth="1.5"
+        className="text-primary/30"
+      />
 
-                  <circle
-                    cx="180"
-                    cy="305"
-                    r="5"
-                    fill="currentColor"
-                    className="text-accent"
-                  />
+      <circle
+        cx="292"
+        cy="365"
+        r="5"
+        fill="currentColor"
+        className="text-accent"
+      />
 
-                  <circle
-                    cx="500"
-                    cy="305"
-                    r="5"
-                    fill="currentColor"
-                    className="text-accent"
-                  />
+      <circle
+        cx="388"
+        cy="365"
+        r="5"
+        fill="currentColor"
+        className="text-accent"
+      />
 
-                  <circle
-                    cx="820"
-                    cy="305"
-                    r="5"
-                    fill="currentColor"
-                    className="text-accent"
-                  />
 
-                  {/* Ketua I ↔ Bendahara → Fundraising */}
+      {/* =====================================================
+          KETUA I → BENDAHARA
 
-                  <line
-                    x1="580"
-                    y1="365"
-                    x2="665"
-                    y2="365"
-                    stroke="currentColor"
-                    strokeWidth="1.5"
-                    className="text-primary/30"
-                  />
+          Garis keluar dari sisi kanan Ketua I
+          dan masuk ke sisi kiri Bendahara.
+      ===================================================== */}
 
-                  <line
-                    x1="820"
-                    y1="365"
-                    x2="665"
-                    y2="365"
-                    stroke="currentColor"
-                    strokeWidth="1.5"
-                    className="text-primary/30"
-                  />
+      <line
+        x1="612"
+        y1="365"
+        x2="708"
+        y2="365"
+        stroke="currentColor"
+        strokeWidth="1.5"
+        className="text-primary/30"
+      />
 
-                  <line
-                    x1="665"
-                    y1="365"
-                    x2="665"
-                    y2="420"
-                    stroke="currentColor"
-                    strokeWidth="1.5"
-                    className="text-primary/30"
-                  />
+      <circle
+        cx="612"
+        cy="365"
+        r="5"
+        fill="currentColor"
+        className="text-accent"
+      />
 
-                  <circle
-                    cx="665"
-                    cy="365"
-                    r="5"
-                    fill="currentColor"
-                    className="text-accent"
-                  />
+      <circle
+        cx="708"
+        cy="365"
+        r="5"
+        fill="currentColor"
+        className="text-accent"
+      />
 
-                  {/* Ketua I → Departemen */}
 
-                  <line
-                    x1="500"
-                    y1="395"
-                    x2="500"
-                    y2="525"
-                    stroke="currentColor"
-                    strokeWidth="1.5"
-                    className="text-primary/30"
-                  />
+      {/* =====================================================
+          KETUA I → DEPARTEMEN
 
-                  {/* Department horizontal */}
+          Garis turun tepat dari tengah Ketua I.
+      ===================================================== */}
 
-                  <line
-                    x1="180"
-                    y1="525"
-                    x2="820"
-                    y2="525"
-                    stroke="currentColor"
-                    strokeWidth="1.5"
-                    className="text-primary/30"
-                  />
+      <line
+        x1="500"
+        y1="395"
+        x2="500"
+        y2="525"
+        stroke="currentColor"
+        strokeWidth="1.5"
+        className="text-primary/30"
+      />
 
-                  {/* Program */}
+      <circle
+        cx="500"
+        cy="525"
+        r="5"
+        fill="currentColor"
+        className="text-accent"
+      />
 
-                  <line
-                    x1="180"
-                    y1="525"
-                    x2="180"
-                    y2="550"
-                    stroke="currentColor"
-                    strokeWidth="1.5"
-                    className="text-primary/30"
-                  />
 
-                  {/* Humas */}
+      {/* =====================================================
+          BENDAHARA → FUNDRAISING
 
-                  <line
-                    x1="500"
-                    y1="525"
-                    x2="500"
-                    y2="550"
-                    stroke="currentColor"
-                    strokeWidth="1.5"
-                    className="text-primary/30"
-                  />
+          Fundraising berada di bawah jalur
+          antara Ketua I dan Bendahara.
+      ===================================================== */}
 
-                  {/* SDM */}
+      <line
+        x1="660"
+        y1="365"
+        x2="660"
+        y2="420"
+        stroke="currentColor"
+        strokeWidth="1.5"
+        className="text-primary/30"
+      />
 
-                  <line
-                    x1="820"
-                    y1="525"
-                    x2="820"
-                    y2="550"
-                    stroke="currentColor"
-                    strokeWidth="1.5"
-                    className="text-primary/30"
-                  />
+      <circle
+        cx="660"
+        cy="365"
+        r="5"
+        fill="currentColor"
+        className="text-accent"
+      />
 
-                  {/* Department nodes */}
 
-                  <circle
-                    cx="500"
-                    cy="525"
-                    r="5"
-                    fill="currentColor"
-                    className="text-accent"
-                  />
+      {/* =====================================================
+          DEPARTEMEN HORIZONTAL
+      ===================================================== */}
 
-                  <circle
-                    cx="180"
-                    cy="525"
-                    r="5"
-                    fill="currentColor"
-                    className="text-accent"
-                  />
+      <line
+        x1="180"
+        y1="525"
+        x2="820"
+        y2="525"
+        stroke="currentColor"
+        strokeWidth="1.5"
+        className="text-primary/30"
+      />
 
-                  <circle
-                    cx="820"
-                    cy="525"
-                    r="5"
-                    fill="currentColor"
-                    className="text-accent"
-                  />
-                </svg>
 
-                {/* =====================================================
-                    DEWAN PEMBINA
-                ===================================================== */}
+      {/* =====================================================
+          PROGRAM
+      ===================================================== */}
 
-                <div className="absolute left-1/2 top-0 z-10 -translate-x-1/2">
-                  <OrgBox
-                    tone="dark"
-                    subtitle="Dewan Pembina / Pengawas"
-                    title={
-                      <>
-                        <span className="block">
-                          1. Lutfi Thamrin
-                        </span>
+      <line
+        x1="180"
+        y1="525"
+        x2="180"
+        y2="550"
+        stroke="currentColor"
+        strokeWidth="1.5"
+        className="text-primary/30"
+      />
 
-                        <span className="mt-1 block">
-                          2. Amin Saefullah Muchtar
-                        </span>
-                      </>
-                    }
-                    className="w-[420px]"
-                  />
-                </div>
+      <circle
+        cx="180"
+        cy="525"
+        r="5"
+        fill="currentColor"
+        className="text-accent"
+      />
 
-                {/* =====================================================
-                    DEWAN PENGURUS
-                ===================================================== */}
 
-                <div className="absolute left-1/2 top-[160px] z-10 -translate-x-1/2">
-                  <OrgBox
-                    tone="dark"
-                    subtitle="Dewan Pengurus"
-                    title={
-                      <>
-                        <span className="block uppercase">
-                          Ketua Umum
-                        </span>
+      {/* =====================================================
+          HUMAS & MEDIA
+      ===================================================== */}
 
-                        <span className="mt-2 block">
-                          Christiana Soerja
-                        </span>
-                      </>
-                    }
-                    className="w-[420px]"
-                  />
-                </div>
+      <line
+        x1="500"
+        y1="525"
+        x2="500"
+        y2="550"
+        stroke="currentColor"
+        strokeWidth="1.5"
+        className="text-primary/30"
+      />
 
-                {/* =====================================================
-                    SEKRETARIS
-                ===================================================== */}
 
-                <div className="absolute left-[68px] top-[330px] z-10">
-                  <OrgBox
-                    subtitle="Sekretaris"
-                    title="Eva Puasanti"
-                    className="w-56"
-                  />
-                </div>
+      {/* =====================================================
+          SDM & RELAWAN
+      ===================================================== */}
 
-                {/* =====================================================
-                    KETUA I
-                ===================================================== */}
+      <line
+        x1="820"
+        y1="525"
+        x2="820"
+        y2="550"
+        stroke="currentColor"
+        strokeWidth="1.5"
+        className="text-primary/30"
+      />
 
-                <div className="absolute left-1/2 top-[330px] z-10 -translate-x-1/2">
-                  <OrgBox
-                    tone="accent"
-                    subtitle="Ketua I"
-                    title="Faridah Nihayah"
-                    className="w-56"
-                  />
-                </div>
+      <circle
+        cx="820"
+        cy="525"
+        r="5"
+        fill="currentColor"
+        className="text-accent"
+      />
 
-                {/* =====================================================
-                    BENDAHARA
-                ===================================================== */}
+    </svg>
 
-                <div className="absolute right-[68px] top-[330px] z-10">
-                  <OrgBox
-                    subtitle="Bendahara"
-                    title="Fitzekustin L Mega V.P."
-                    className="w-56"
-                  />
-                </div>
 
-                {/* =====================================================
-                    FUNDRAISING
-                ===================================================== */}
+    {/* =====================================================
+        DEWAN PEMBINA / PENGAWAS
+    ===================================================== */}
 
-                <div className="absolute left-[665px] top-[420px] z-10 -translate-x-1/2">
-                  <OrgBox
-                    tone="subtle"
-                    subtitle="Departemen"
-                    title="Fundraising"
-                    className="w-56"
-                  />
-                </div>
+    <div className="absolute left-1/2 top-0 z-10 -translate-x-1/2">
+      <OrgBox
+        tone="dark"
+        subtitle="Dewan Pembina / Pengawas"
+        title={
+          <>
+            <span className="block">
+              1. Lutfi Thamrin
+            </span>
 
-                {/* =====================================================
-                    PROGRAM
-                ===================================================== */}
+            <span className="mt-1 block">
+              2. Amin Saefullah Muchtar
+            </span>
+          </>
+        }
+        className="w-[420px]"
+      />
+    </div>
 
-                <div className="absolute left-[68px] top-[550px] z-10">
-                  <OrgBox
-                    tone="subtle"
-                    subtitle="Departemen"
-                    title="Program"
-                    className="w-64"
-                  />
-                </div>
 
-                {/* =====================================================
-                    HUMAS & MEDIA
-                ===================================================== */}
+    {/* =====================================================
+        DEWAN PENGURUS / KETUA UMUM
+    ===================================================== */}
 
-                <div className="absolute left-1/2 top-[550px] z-10 -translate-x-1/2">
-                  <OrgBox
-                    tone="subtle"
-                    subtitle="Departemen"
-                    title="Humas dan Media"
-                    className="w-64"
-                  />
-                </div>
+    <div className="absolute left-1/2 top-[160px] z-10 -translate-x-1/2">
+      <OrgBox
+        tone="dark"
+        subtitle="Dewan Pengurus"
+        title={
+          <>
+            <span className="block uppercase">
+              Ketua Umum
+            </span>
 
-                {/* =====================================================
-                    SDM & RELAWAN
-                ===================================================== */}
+            <span className="mt-2 block">
+              Christiana Soerja
+            </span>
+          </>
+        }
+        className="w-[420px]"
+      />
+    </div>
 
-                <div className="absolute right-[68px] top-[550px] z-10">
-                  <OrgBox
-                    tone="subtle"
-                    subtitle="Departemen"
-                    title="SDM dan Relawan"
-                    className="w-64"
-                  />
-                </div>
-              </div>
-            </div>
 
+    {/* =====================================================
+        SEKRETARIS
+    ===================================================== */}
+
+    <div className="absolute left-[68px] top-[330px] z-10">
+      <OrgBox
+        subtitle="Sekretaris"
+        title="Eva Puasanti"
+        className="w-56"
+      />
+    </div>
+
+
+    {/* =====================================================
+        KETUA I
+    ===================================================== */}
+
+    <div className="absolute left-1/2 top-[330px] z-10 -translate-x-1/2">
+      <OrgBox
+        tone="accent"
+        subtitle="Ketua I"
+        title="Faridah Nihayah"
+        className="w-56"
+      />
+    </div>
+
+
+    {/* =====================================================
+        BENDAHARA
+    ===================================================== */}
+
+    <div className="absolute right-[68px] top-[330px] z-10">
+      <OrgBox
+        subtitle="Bendahara"
+        title="Fitzekustin L Mega V.P."
+        className="w-56"
+      />
+    </div>
+
+
+    {/* =====================================================
+        FUNDRAISING
+    ===================================================== */}
+
+    <div className="absolute left-[660px] top-[420px] z-10 -translate-x-1/2">
+      <OrgBox
+        tone="subtle"
+        subtitle="Departemen"
+        title="Fundraising"
+        className="w-56"
+      />
+    </div>
+
+
+    {/* =====================================================
+        DEPARTEMEN PROGRAM
+    ===================================================== */}
+
+    <div className="absolute left-[52px] top-[550px] z-10">
+      <OrgBox
+        tone="subtle"
+        subtitle="Departemen"
+        title="Program"
+        className="w-64"
+      />
+    </div>
+
+
+    {/* =====================================================
+        DEPARTEMEN HUMAS & MEDIA
+    ===================================================== */}
+
+    <div className="absolute left-1/2 top-[550px] z-10 -translate-x-1/2">
+      <OrgBox
+        tone="subtle"
+        subtitle="Departemen"
+        title="Humas dan Media"
+        className="w-64"
+      />
+    </div>
+
+
+    {/* =====================================================
+        DEPARTEMEN SDM & RELAWAN
+    ===================================================== */}
+
+    <div className="absolute right-[52px] top-[550px] z-10">
+      <OrgBox
+        tone="subtle"
+        subtitle="Departemen"
+        title="SDM dan Relawan"
+        className="w-64"
+      />
+    </div>
+
+  </div>
+</div>
             {/* =====================================================
                 MOBILE / TABLET ORGANIZATION
             ===================================================== */}

@@ -15,46 +15,34 @@ import {
 
 } from "lucide-react";
 
-const waysToJoin = [
+const ways = [
   {
-    number: "01",
-    icon: Heart,
     title: "Donatur",
-    description:
-      "Mendukung program-program sosial melalui donasi sesuai dengan ketentuan dan kebutuhan program.",
-    action: "Donasi Sekarang",
-    whatsappMessage:
-      "Halo Tsurayya Foundation, saya ingin menjadi Donatur dan mendapatkan informasi mengenai program donasi yang tersedia.",
+    description: "Mendukung program-program sosial melalui donasi sesuai dengan ketentuan dan kebutuhan program.",
+    icon: Heart,
+    link: "https://wa.me/6285287034268?text=Halo%20Tsurayya%20Foundation,%20saya%20ingin%20menjadi%20donatur.",
+     action: "Donasi Sekarang",
   },
   {
-    number: "02",
-    icon: HandHeart,
     title: "Relawan",
-    description:
-      "Menyumbangkan waktu, tenaga, ilmu, dan keterampilan untuk kegiatan sosial.",
+    description: "Bergabung dan ambil bagian dalam kegiatan sosial. Memberikan waktu, tenaga, ilmu, dan keterampilan untuk kegiatan sosial.",
+    icon: HandHeart,
+    link: "",
     action: "Jadi Relawan",
-    whatsappMessage:
-      "Halo Tsurayya Foundation, saya tertarik untuk menjadi Relawan. Mohon informasi mengenai kesempatan dan kegiatan relawan yang tersedia.",
   },
   {
-    number: "03",
-    icon: Users,
     title: "Mitra",
-    description:
-      "Berkolaborasi dalam mengembangkan program yang memberikan manfaat bagi masyarakat.",
+    description: "Berkolaborasi dalam mengembangkan program yang memberikan manfaat bagi masyarakat.",
+    icon: Users,
+    link: "https://wa.me/6285287034268?text=Halo%20Tsurayya%20Foundation,%20saya%20ingin%20menjadi%20mitra.",
     action: "Jadi Mitra",
-    whatsappMessage:
-      "Halo Tsurayya Foundation, saya tertarik untuk menjadi Mitra dan ingin berdiskusi mengenai peluang kolaborasi.",
   },
   {
-    number: "04",
-    icon: Megaphone,
     title: "Sahabat Kebaikan",
-    description:
-      "Menyebarkan informasi dan mengajak lebih banyak orang untuk terlibat dalam gerakan kebaikan.",
-    action: "Sebarkan Kebaikan",
-    whatsappMessage:
-      "Halo Tsurayya Foundation, saya tertarik untuk menjadi Sahabat Kebaikan dan ingin ikut membantu menyebarkan informasi mengenai gerakan kebaikan.",
+    description: "Menyebarkan informasi dan mengajak lebih banyak orang untuk terlibat dalam gerakan kebaikan..",
+    icon: Megaphone,
+    link: "https://wa.me/6285287034268?text=Halo%20Tsurayya%20Foundation,%20saya%20ingin%20menjadi%20donatur.",
+    action: "Jadi Sahabat",
   },
 ];
 const principles = [
@@ -148,100 +136,49 @@ export default function JoinPage() {
             </div>
 
 
-        <div className="mt-16 grid gap-5 md:grid-cols-2">
-  {waysToJoin.map((item) => {
-    const Icon = item.icon;
-
-    const whatsappUrl = `https://wa.me/6285287034268?text=${encodeURIComponent(
-      item.whatsappMessage
-    )}`;
+ <div className="mt-16 grid gap-4 md:grid-cols-2">
+  {ways.map((way, index) => {
+    const Icon = way.icon;
 
     return (
       <a
-        key={item.number}
-        href={whatsappUrl}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="group block"
+        key={way.title}
+        href={way.link}
+        target={way.link.startsWith("http") ? "_blank" : undefined}
+        rel={way.link.startsWith("http") ? "noopener noreferrer" : undefined}
+        className="group block rounded-[1.75rem] border border-black/10 bg-white p-7 transition-all hover:-translate-y-1 hover:border-primary/20 hover:shadow-xl hover:shadow-primary/5 sm:p-9"
       >
-        <article
-          className="
-            relative h-full overflow-hidden rounded-[2rem]
-            border border-primary/10 bg-white p-7
-            transition-all duration-300
-            hover:-translate-y-1
-            hover:border-primary/20
-            hover:shadow-xl
-            sm:p-9
-          "
-        >
-          {/* Number */}
-          <div className="absolute right-7 top-7 text-sm font-semibold text-primary/10 transition-colors group-hover:text-accent/30">
-            {item.number}
+        <div className="flex items-start justify-between">
+          <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary-light text-primary">
+            <Icon size={21} strokeWidth={1.7} />
           </div>
 
-          {/* Icon */}
-          <div
-            className="
-              flex h-14 w-14 items-center justify-center
-              rounded-full bg-primary-light text-primary
-              transition-all duration-300
-              group-hover:bg-primary
-              group-hover:text-white
-            "
-          >
-            <Icon
-              size={24}
-              strokeWidth={1.5}
-            />
-          </div>
+          <span className="text-sm font-medium text-accent">
+            0{index + 1}
+          </span>
+        </div>
 
-          {/* Title */}
-          <h3 className="mt-8 text-2xl font-semibold text-primary sm:text-3xl">
-            {item.title}
-          </h3>
+        <h3 className="mt-8 text-2xl font-semibold text-primary">
+          {way.title}
+        </h3>
 
-          {/* Description */}
-          <p className="mt-4 max-w-md text-sm leading-7 text-muted">
-            {item.description}
-          </p>
+        <p className="mt-3 max-w-md text-sm leading-7 text-muted">
+          {way.description}
+        </p>
 
-          {/* Action */}
-          <div
-            className="
-              mt-8 inline-flex items-center gap-2
-              text-sm font-semibold text-primary
-              transition-colors
-              group-hover:text-accent
-            "
-          >
-            {item.action}
+        <div className="mt-8 flex items-center gap-2 text-sm font-semibold text-primary">
+        {way.action}
 
-            <ArrowUpRight
-              size={17}
-              className="
-                transition-transform duration-300
-                group-hover:translate-x-1
-                group-hover:-translate-y-1
-              "
-            />
-          </div>
-
-          {/* Decorative hover element */}
-          <div
-            className="
-              pointer-events-none absolute -bottom-16 -right-16
-              h-32 w-32 rounded-full
-              border border-primary/5
-              transition-transform duration-500
-              group-hover:scale-150
-            "
+          <ArrowUpRight
+            size={17}
+            className="transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
           />
-        </article>
+        </div>
       </a>
     );
   })}
 </div>
+
 
           </div>
 

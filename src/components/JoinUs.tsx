@@ -9,30 +9,33 @@ import {
 const ways = [
   {
     title: "Donatur",
-    description:
-      "Mendukung program-program sosial melalui donasi sesuai dengan kebutuhan program.",
+    description: "Mendukung program-program sosial melalui donasi sesuai dengan ketentuan dan kebutuhan program.",
     icon: Heart,
+    link: "https://wa.me/6285287034268?text=Halo%20Tsurayya%20Foundation,%20saya%20ingin%20menjadi%20donatur.",
+     action: "Donasi Sekarang",
   },
   {
     title: "Relawan",
-    description:
-      "Menyumbangkan waktu, tenaga, ilmu, dan keterampilan untuk kegiatan sosial.",
+    description: "Bergabung dan ambil bagian dalam kegiatan sosial. Memberikan waktu, tenaga, ilmu, dan keterampilan untuk kegiatan sosial.",
     icon: HandHeart,
+    link: "",
+    action: "Jadi Relawan",
   },
   {
     title: "Mitra",
-    description:
-      "Berkolaborasi dalam mengembangkan program yang memberikan manfaat bagi masyarakat.",
+    description: "Berkolaborasi dalam mengembangkan program yang memberikan manfaat bagi masyarakat.",
     icon: Users,
+    link: "https://wa.me/6285287034268?text=Halo%20Tsurayya%20Foundation,%20saya%20ingin%20menjadi%20mitra.",
+    action: "Jadi Mitra",
   },
   {
     title: "Sahabat Kebaikan",
-    description:
-      "Menyebarkan informasi dan mengajak lebih banyak orang terlibat dalam gerakan kebaikan.",
+    description: "Menyebarkan informasi dan mengajak lebih banyak orang untuk terlibat dalam gerakan kebaikan..",
     icon: Megaphone,
+    link: "https://wa.me/6285287034268?text=Halo%20Tsurayya%20Foundation,%20saya%20ingin%20menjadi%20donatur.",
+    action: "Jadi Sahabat",
   },
 ];
-
 export default function JoinUs() {
   return (
     <section
@@ -63,44 +66,47 @@ export default function JoinUs() {
 
         {/* Ways */}
         <div className="mt-16 grid gap-4 md:grid-cols-2">
-          {ways.map((way, index) => {
-            const Icon = way.icon;
+  {ways.map((way, index) => {
+    const Icon = way.icon;
 
-            return (
-              <div
-                key={way.title}
-                className="group rounded-[1.75rem] border border-black/10 bg-white p-7 transition-all hover:-translate-y-1 hover:border-primary/20 hover:shadow-xl hover:shadow-primary/5 sm:p-9"
-              >
-                <div className="flex items-start justify-between">
-                  <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary-light text-primary">
-                    <Icon size={21} strokeWidth={1.7} />
-                  </div>
+    return (
+      <a
+        key={way.title}
+        href={way.link}
+        target={way.link.startsWith("http") ? "_blank" : undefined}
+        rel={way.link.startsWith("http") ? "noopener noreferrer" : undefined}
+        className="group block rounded-[1.75rem] border border-black/10 bg-white p-7 transition-all hover:-translate-y-1 hover:border-primary/20 hover:shadow-xl hover:shadow-primary/5 sm:p-9"
+      >
+        <div className="flex items-start justify-between">
+          <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary-light text-primary">
+            <Icon size={21} strokeWidth={1.7} />
+          </div>
 
-                  <span className="text-sm font-medium text-accent">
-                    0{index + 1}
-                  </span>
-                </div>
-
-                <h3 className="mt-8 text-2xl font-semibold text-primary">
-                  {way.title}
-                </h3>
-
-                <p className="mt-3 max-w-md text-sm leading-7 text-muted">
-                  {way.description}
-                </p>
-
-                <div className="mt-8 flex items-center gap-2 text-sm font-semibold text-primary">
-                  Pelajari lebih lanjut
-
-                  <ArrowUpRight
-                    size={17}
-                    className="transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
-                  />
-                </div>
-              </div>
-            );
-          })}
+          <span className="text-sm font-medium text-accent">
+            0{index + 1}
+          </span>
         </div>
+
+        <h3 className="mt-8 text-2xl font-semibold text-primary">
+          {way.title}
+        </h3>
+
+        <p className="mt-3 max-w-md text-sm leading-7 text-muted">
+          {way.description}
+        </p>
+
+        <div className="mt-8 flex items-center gap-2 text-sm font-semibold text-primary">
+        {way.action}
+
+          <ArrowUpRight
+            size={17}
+            className="transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
+          />
+        </div>
+      </a>
+    );
+  })}
+</div>
 
         {/* CTA */}
         <div className="mt-8 overflow-hidden rounded-[2rem] bg-primary p-8 sm:p-12 lg:p-16">
